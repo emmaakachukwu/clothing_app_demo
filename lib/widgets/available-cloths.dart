@@ -71,11 +71,16 @@ class _AvailableClothsState extends State<AvailableCloths> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: <Widget>[
-          ClothList(_clothList),
-        ],
+    return Scaffold(
+      appBar: AppBar(title: Text('Cloth', style: TextStyle(color: Colors.blue),),backgroundColor: Color(0xffffffff),),
+      
+      body: 
+          SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            ClothList(_clothList),
+          ],
+        ),
       ),
     );
   }
