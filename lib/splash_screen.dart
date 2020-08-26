@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 
-import 'home_page.dart';
+import './widgets/available-cloths.dart';
+
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => HomePage(),
+            builder: (context) => AvailableCloths(),
           ),
         );
       },
