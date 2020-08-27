@@ -18,15 +18,16 @@ class _AvailableClothsState extends State<AvailableCloths> {
 
   final List<Cloth> _clothList = [
     Cloth(
-        id: 1,
-        image: Image(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            'assets/images/img5.jpg',
-          ),
+      id: 1,
+      image: Image(
+        fit: BoxFit.cover,
+        image: AssetImage(
+          'assets/images/img5.jpg',
         ),
-        description:
-            'cotton which is generally accepted and made off thread-like material creats a comfort when its worn  '),
+      ),
+      description:
+          'cotton which is generally accepted and made off thread-like material creats a comfort when its worn',
+    ),
     Cloth(
         id: 1,
         image: Image(
@@ -38,15 +39,16 @@ class _AvailableClothsState extends State<AvailableCloths> {
         description:
             'it keeps the body warm during cold weather and as well cool during harsh weather'),
     Cloth(
-        id: 1,
-        image: Image(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            'assets/images/img3.jpg',
-          ),
+      id: 1,
+      image: Image(
+        fit: BoxFit.cover,
+        image: AssetImage(
+          'assets/images/img3.jpg',
         ),
-        description:
-            'plain and pattern material are use occassionially for making native wears '),
+      ),
+      description:
+          'plain and pattern material are use occassionially for making native wears ',
+    ),
     Cloth(
         id: 1,
         image: Image(
@@ -58,24 +60,40 @@ class _AvailableClothsState extends State<AvailableCloths> {
         description:
             'suite wears as the name implies serves as an attire for making suites during wedding and other occasions  '),
     Cloth(
-        id: 1,
-        image: Image(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            'assets/images/ankara.jpg',
-          ),
+      id: 1,
+      image: Image(
+        fit: BoxFit.cover,
+        image: AssetImage(
+          'assets/images/ankara.jpg',
         ),
-        description:
-            'cotton which is generally accepted and made off thread-like material creats a comfort when its worn  '),
+      ),
+      description:
+          'cotton which is generally accepted and made off thread-like material creats a comfort when its worn  ',
+    ),
+    Cloth(
+      id: 1,
+      image: Image(
+        fit: BoxFit.cover,
+        image: AssetImage(
+          'assets/images/img3.jpg',
+        ),
+      ),
+      description:
+          'plain and pattern material are use occassionially for making native wears ',
+    ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Cloth', style: TextStyle(color: Colors.blue),),backgroundColor: Color(0xffffffff),),
-      
-      body: 
-          SingleChildScrollView(
+      appBar: AppBar(
+        title: Text(
+          'Cloth',
+          style: TextStyle(color: Colors.blue),
+        ),
+        backgroundColor: Color(0xffffffff),
+      ),
+      body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             ClothList(_clothList),
