@@ -1,9 +1,9 @@
+import 'package:clothing_app_demo/auth/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:async';
 
-import './widgets/available-cloths.dart';
-
+// import './widgets/available-cloths.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -22,7 +22,8 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => AvailableCloths(),
+            // Redirects to the sign in widget after splash screen widget loads
+            builder: (context) => SignIn(),
           ),
         );
       },
