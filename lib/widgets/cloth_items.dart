@@ -30,10 +30,10 @@ class ClothItem extends StatelessWidget {
                 Expanded(
                   flex: 2,
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(10, 0, 5, 10),
+                    padding: EdgeInsets.fromLTRB(10, 0, 5, 30),
                     child: Text(
                       cloths.description,
-                      style: GoogleFonts.raleway(
+                      style: GoogleFonts.robotoCondensed(
                         textStyle: TextStyle(
                           fontSize: 15,
                         ),

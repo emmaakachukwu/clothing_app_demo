@@ -5,6 +5,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:clothing_app_demo/model/ClothList.dart';
 
 import 'package:clothing_app_demo/widgets/cloth_list.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AvailableCloths extends StatefulWidget {
   @override
@@ -68,7 +69,7 @@ class _AvailableClothsState extends State<AvailableCloths> {
         ),
       ),
       description:
-          'cotton which is generally accepted and made off thread-like material creats a comfort when its worn  ',
+          'cotton which is generally accepted and made off thread-like material creats a comfort when its worn ',
     ),
     Cloth(
       id: 1,
@@ -87,9 +88,16 @@ class _AvailableClothsState extends State<AvailableCloths> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text(
-          'Cloth',
-          style: TextStyle(color: Colors.blue),
+          'Available Clothes',
+          style: GoogleFonts.raleway(
+            textStyle: TextStyle(
+              fontSize: 20,
+              color: Color(0XFF000000),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ),
         backgroundColor: Color(0xffffffff),
       ),
