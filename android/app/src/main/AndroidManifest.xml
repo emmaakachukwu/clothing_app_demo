@@ -7,7 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="clothing_app_demo"
+        android:label="Customized"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
