@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_auth/Screens/Login/login_screen.dart';
 import 'package:flutter_auth/Screens/Signup/components/background.dart';
@@ -10,6 +11,19 @@ import 'package:flutter_auth/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Body extends StatelessWidget {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  FirebaseAuth _auth = FirebaseAuth.instance;
+
+  void _register() async {
+    final User user = (await _auth.createUserWithEmailAndPassword(
+      email: _emailController.text,
+      password: _passwordController.text,
+    ))
+        .user;
+    print(user);
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -30,13 +44,15 @@ class Body extends StatelessWidget {
             RoundedInputField(
               hintText: "Your Email",
               onChanged: (value) {},
+              controller: _emailController,
             ),
             RoundedPasswordField(
               onChanged: (value) {},
+              controller: _passwordController,
             ),
             RoundedButton(
               text: "SIGNUP",
-              press: () {},
+              press: _register,
             ),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
